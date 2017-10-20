@@ -9,18 +9,18 @@ html
 				h2 Fans leave messages to me!
 				each val, key in messages
 					div 
-						p ##{key} From #{val.author} at #{val.time} #{val.email}
+						H3 ##{key} From #{val.author} at #{val.time} #{val.email}
 						p #{val.content}
-		div
-			h2 I'm your fans
-			form(name = 'comment', method = 'POST')
-				label(for="author") Author: 
-				input(name = 'author')
-				br
-				label(for="email") Email:
-				input(name = 'email')
-				br
-				label(for="content") Content:
-				input(name = 'content')
-				br
-				input(type='submit')
+			div
+				h2 I'm your fans
+				form(name = 'comment', method = 'POST')
+					label(for="author") Author: 
+					input(name = 'author')
+					br
+					label(for="email") Email:
+					input(name = 'email')
+					br
+					label(for="content") Content:
+					input(name = 'content')
+					br
+					input(type='submit')
