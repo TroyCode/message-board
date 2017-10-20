@@ -1,9 +1,16 @@
+function zeroPaddingLeft(str, place) {
+	while (str.length < place) {
+		str = '0' + str
+	}
+	return str
+}
+
 function formatTime(d) {
 	let year   = d.getFullYear(),
-			month  = d.getMonth() + 1,
-			date   = d.getDate()
-			hour   = d.getHours()
-			minute = d.getMinutes()
+			month  = zeroPaddingLeft((d.getMonth() + 1).toString(), 2),
+			date   = zeroPaddingLeft(d.getDate().toString(), 2),
+			hour   = zeroPaddingLeft(d.getHours().toString(), 2),
+			minute = zeroPaddingLeft(d.getMinutes().toString(), 2)
 	return `${year}-${month}-${date} ${hour}:${minute}`
 }
 
