@@ -11,7 +11,8 @@ function formatTime(d) {
 			date   = zeroPaddingLeft(d.getDate().toString(), 2),
 			hour   = zeroPaddingLeft(d.getHours().toString(), 2),
 			minute = zeroPaddingLeft(d.getMinutes().toString(), 2)
-	return `${year}-${month}-${date} ${hour}:${minute}`
+			second = zeroPaddingLeft(d.getSeconds().toString(), 2)
+	return `${year}-${month}-${date} ${hour}:${minute}:${second}`
 }
 
 module.exports = {

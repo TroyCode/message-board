@@ -8,7 +8,7 @@ function getMessages() {
 
 function putMessage(input) {
 	let message = {
-		author: input.author,
+		author: uppercaseName(input.author),
 		email: composeEmail(input.email),
 		time: tim.formatTime(new Date()),
 		content: input.content
@@ -28,8 +28,15 @@ function composeEmail(email) {
 	return realEmail
 }
 
+function uppercaseName(name) {
+	return name.split(' ').map(x => {
+		return x.charAt(0).toUpperCase() + x.substr(1)
+	}).join(' ')
+}
+
 module.exports = {
 	getMessages,
 	putMessage,
-	composeEmail
+	composeEmail,
+	uppercaseName
 }
