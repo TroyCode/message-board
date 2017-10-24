@@ -37,3 +37,5 @@ app.route('/')
 app.listen(PORT, _ => {
 	console.log(`message board is running at port ${PORT}`)
 })
+
+module.exports = app

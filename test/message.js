@@ -14,6 +14,11 @@ describe('message', () => {
 			assert.strictEqual(mes.composeEmail('www.104.com.tw'), '')
 		})
 
+		// it('should deny double dot', () => {
+		// 	assert.strictEqual(mes.composeEmail('admin@..gmail.com'), '')
+		// 	assert.strictEqual(mes)
+		// })
+
 		it('should deny unrecognized symbol', () => {
 			assert.strictEqual(mes.composeEmail('admin@@google.com'), '')
 			assert.strictEqual(mes.composeEmail('admin~google.com'), '')
