@@ -10,10 +10,10 @@ npm install
 
 ## Test it 
 ```
-mocha --exit
+npm test
 ```
 
 ## Run it
 ```
-nodemon start.js
+npm start
 ```
